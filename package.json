@@ -1,0 +1,22 @@
+{
+  "name": "hotel-faturas-api",
+  "version": "1.0.0",
+  "description": "API para gerenciar faturas de hotel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedro-jds/hotel-faturas-API.git"
+  },
+  "author": "Pedro junior da silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedro-jds/hotel-faturas-API/issues"
+  },
+  "homepage": "https://github.com/Pedro-jds/hotel-faturas-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
