@@ -1,7 +1,7 @@
 class Faturas {
     constructor(metodoPagamento,statusPagamento,valorTotal){
         this.metodoPagamento = metodoPagamento
-        this.statusPagamento = this.verificaStatus(statusPagamento)
+        this.statusPagamento = this.verificaStatus(statusPagamento).toLowerCase()
         this.valorTotal = valorTotal
     }
 

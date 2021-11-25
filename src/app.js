@@ -10,7 +10,7 @@ app.use(express.json());
 tarefa(app)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Bem vindo ao gerenciador de faturas API')
 })
 
 
