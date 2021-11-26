@@ -1,11 +1,12 @@
 const express = require('express')
 const tarefa = require('./controllers/faturasController')
 const app = express()
-
+const cors = require('cors')
 
 
 //Middlewares
 app.use(express.json());
+app.use(cors())
 
 tarefa(app)
 
