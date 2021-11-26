@@ -74,28 +74,28 @@ class FaturasDAO {
                     resolve({
                         "mensagem": "Fatura criada com sucesso",
                         "id": this.lastID,
-                        "erro": false
+                        "erro": false,
                     })
                 }
             })
         })
     }
     updateById(params) {
-        return new Promise((resolve,reject)=>{
+        return new Promise((resolve, reject) => {
             const sql = `UPDATE FATURAS SET
                         METODO_PAGAMENTO = COALESCE(?,metodo_pagamento),
                         STATUS_PAGAMENTO = COALESCE(?,status_pagamento),
                         VALOR_TOTAL = COALESCE(?,valor_total)
                         WHERE ID = ?`
-            this.db.run(sql,params,(err)=>{
-                if(err){
+            this.db.run(sql, params, (err) => {
+                if (err) {
                     reject({
-                        "mensagem":err.message
+                        "mensagem": err.message
                     })
                 }
-                else{
+                else {
                     resolve({
-                        "mensagem":"Fatura atualizada com sucesso",
+                        "mensagem": "Fatura atualizada com sucesso",
                         "changes": this.changes,
                         "erro": false
                     })
