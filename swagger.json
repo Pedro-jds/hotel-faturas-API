@@ -5,7 +5,7 @@
     "title": "Hotel California API",
     "description": ""
   },
-  "host": "https://faturas-hotel-api.herokuapp.com",
+  "host": "faturas-hotel-api.herokuapp.com",
   "basePath": "/",
   "tags": [],
   "schemes": [
