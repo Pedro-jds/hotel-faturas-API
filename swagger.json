@@ -2,35 +2,65 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
+    "title": "Hotel California API",
     "description": ""
   },
   "host": "localhost:3002",
   "basePath": "/",
   "tags": [],
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "consumes": [],
   "produces": [],
   "paths": {
     "/faturas": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "Faturas"
+        ],
+        "summary": "Retorna todas as faturas cadastradas",
+        "description": "Retorna todas as faturas cadastradas no banco de dados",
         "parameters": [],
         "responses": {}
       },
       "post": {
-        "tags": [],
-        "description": "",
-        "parameters": [],
+        "tags": [
+          "Faturas"
+        ],
+        "summary": "Cadastra uma fatura",
+        "description": "Atributo status_pagamento aceita somente os dados (pago, pendente ou cancelado)",
+        "parameters": [
+          {
+            "name": "JSON",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "metodo_pagamento": {
+                  "example": "pix"
+                },
+                "status_pagamento": {
+                  "example": "pago"
+                },
+                "valor_total": {
+                  "example": "1000"
+                }
+              }
+            }
+          }
+        ],
         "responses": {}
       }
     },
     "/faturas/{id}": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Faturas"
+        ],
+        "summary": "Busca uma fatura pelo identificador",
         "description": "",
         "parameters": [
           {
@@ -43,7 +73,10 @@
         "responses": {}
       },
       "delete": {
-        "tags": [],
+        "tags": [
+          "Faturas"
+        ],
+        "summary": "Deleta uma fatura pelo identificador",
         "description": "",
         "parameters": [
           {
@@ -56,7 +89,10 @@
         "responses": {}
       },
       "patch": {
-        "tags": [],
+        "tags": [
+          "Faturas"
+        ],
+        "summary": "Atuliza o dados de uma fatura",
         "description": "",
         "parameters": [
           {
@@ -64,6 +100,24 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "metodo_pagamento": {
+                  "example": "pix"
+                },
+                "status_pagamento": {
+                  "example": "pago"
+                },
+                "valor_total": {
+                  "example": "1000"
+                }
+              }
+            }
           }
         ],
         "responses": {}
