@@ -1,5 +1,3 @@
----
-
 ## Hotel California API
 
 ### Link da API no HEROKU:
