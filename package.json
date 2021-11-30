@@ -21,6 +21,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "joi": "^17.4.2",
     "sqlite3": "^5.0.2",
     "swagger-ui-express": "^4.1.6"
   },
@@ -28,5 +29,7 @@
     "nodemon": "^2.0.15",
     "swagger-autogen": "^2.13.0"
   },
-  "engines":{"node":"16.*"}
+  "engines": {
+    "node": "16.*"
+  }
 }
