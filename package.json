@@ -4,7 +4,7 @@
   "description": "API para gerenciar faturas de hotel",
   "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon",
     "start": "node ./src/server.js"
   },
@@ -26,7 +26,9 @@
     "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
+    "jest": "^27.4.2",
     "nodemon": "^2.0.15",
+    "supertest": "^6.1.6",
     "swagger-autogen": "^2.13.0"
   },
   "engines": {
