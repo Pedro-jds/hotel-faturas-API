@@ -47,7 +47,7 @@ Segue abaixo um resumo das rotas da API. Em seguida terão mais informações so
 * DELETE: *URL_BASE/faturas/{id}*
 
 
-### **Retornando os Hóspedes**
+### **Retornando as faturas**
 
 GET: *URL_BASE/faturas*
 
@@ -178,7 +178,9 @@ Resposta:
 ### **Deletando uma fatura**
 
 DELETE: *URL_BASE/faturas/{id}*
+
 Resposta:
+
  ~~~JSON
 {
   "mensagem": "Fatura excluído com sucesso!",
