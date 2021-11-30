@@ -128,7 +128,7 @@ Resposta para id = 1:
 }
 ~~~
 
-### **Inserindo novo hóspede**
+### **Inserindo nova fatura**
 
 POST: *URL_BASE/faturas*
 
@@ -153,7 +153,7 @@ Modelo a ser utilizado no body, no formato JSON,não enviar dados para data_cria
 
 **IMPORTANTE**:
 
-### **Atualizando Hóspedes**
+### **Atualizando uma fatura**
 
 PUT: *URL_BASE/faturas/{id}*
 
@@ -169,19 +169,19 @@ Modelo a ser utilizado no body, no formato JSON. **Não é obrigatório** conter
 Resposta:
  ~~~JSON
 {
-  "messagem": "Hóspede atualizado com sucesso",
+  "messagem": "Fatura atualizada com sucesso",
   "erro": false,
   "changes": 1
 }
 ~~~
 
-### **Deletando Hóspede**
+### **Deletando uma fatura**
 
 DELETE: *URL_BASE/faturas/{id}*
 Resposta:
  ~~~JSON
 {
-  "mensagem": "Hospede excluído com sucesso!",
+  "mensagem": "Fatura excluído com sucesso!",
   "changes": 1
 }
 ~~~

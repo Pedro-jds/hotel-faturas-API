@@ -27,5 +27,6 @@
   "devDependencies": {
     "nodemon": "^2.0.15",
     "swagger-autogen": "^2.13.0"
-  }
+  },
+  "engines":{"node":"16.*"}
 }

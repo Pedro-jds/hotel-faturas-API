@@ -32,6 +32,9 @@ class FaturasDAO {
                     })
                 }
                 else {
+                    if(row===undefined){
+                        row = {"mensagem":"Fatura não existe"}
+                    }
                     resolve({
                         "Fatura": row,
                         "error": false
