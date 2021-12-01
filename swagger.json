@@ -29,7 +29,7 @@
           "Faturas"
         ],
         "summary": "Cadastra uma fatura",
-        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores (<b>numeros, inteiros e positivos</b>)<br><b>Todos atributos precisam ser preenchidos para validar a criação da fatura</b>",
+        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores que são (<b>numeros, inteiros e positivos</b>)<br><b>Todos atributos precisam ser preenchidos para validar a criação da fatura</b>",
         "parameters": [
           {
             "name": "JSON",
@@ -92,7 +92,7 @@
           "Faturas"
         ],
         "summary": "Atuliza um ou mais dados de uma fatura",
-        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores (<b>numeros, inteiros e positivos</b>)<br><b>Todos atributos precisam ser preenchidos para validar a criação da fatura</b>",
+        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores que são (<b>numeros, inteiros e positivos</b>)<br><b>Faturas podem ser atualizadas de forma integral ou parcial basta não envia o atributo e o valor que não precisa ser atualizado</b>",
         "parameters": [
           {
             "name": "id",
