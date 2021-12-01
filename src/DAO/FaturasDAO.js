@@ -22,18 +22,19 @@ class FaturasDAO {
             })
         })
     }
-    getById(id) {
+    async getById(id) {
         return new Promise((resolve, reject) => {
             const sql = `SELECT * FROM FATURAS WHERE ID = ?`
             this.db.get(sql, id, (err, row) => {
                 if (err) {
                     reject({
-                        "mensagem": err.message
+                        "mensagem": err.message,
+                        "error": true
                     })
                 }
                 else {
-                    if(row===undefined){
-                        row = {"mensagem":"Fatura não existe"}
+                    if (row === undefined) {
+                        row = { "mensagem": "Fatura não existe" }
                     }
                     resolve({
                         "Fatura": row,
@@ -43,31 +44,38 @@ class FaturasDAO {
             })
         })
     }
-    deleteById(id) {
-        return new Promise((resolve, reject) => {
-            const sql = `DELETE FROM FATURAS WHERE ID = ?`
-            this.db.run(sql, id, (err) => {
-                if (err) {
-                    reject({
-                        "mensagem": err.message
-                    })
-                }
-                else {
-                    resolve({
-                        "mensagem": "Fatura excluida com sucesso",
-                        "erro": false
-                    })
-                }
+    async deleteById(id) {
+        const fatura = await this.getById(id)
+        if (fatura.Fatura.mensagem === 'Fatura não existe') {
+            throw new Error('Fatura não existe')
+        }
+        else {
+            return new Promise((resolve, reject) => {
+                const sql = `DELETE FROM FATURAS WHERE ID = ?`
+                this.db.run(sql, id, (err) => {
+                    if (err) {
+                        reject({
+                            "mensagem": err.message
+                        })
+                    }
+                    else {
+                        resolve({
+                            "mensagem": `Fatura id:${fatura.Fatura.ID} excluida com sucesso`,
+                            "erro": false
+                        })
+                    }
+                })
             })
-        })
+        }
     }
     createFatura(params) {
+
         return new Promise((resolve, reject) => {
             const sql = `INSERT INTO FATURAS 
                         (METODO_PAGAMENTO,STATUS_PAGAMENTO,VALOR_TOTAL)
                         VALUES
                         (?,?,?)`
-            this.db.run(sql, params, (err) => {
+            this.db.run(sql, params,function (err) {
                 if (err) {
                     reject({
                         "mensagem": err.message
@@ -76,7 +84,7 @@ class FaturasDAO {
                 else {
                     resolve({
                         "mensagem": "Fatura criada com sucesso",
-                        "id": this.lastID,
+                        "identificador": this.lastID,
                         "erro": false,
                     })
                 }
@@ -90,7 +98,7 @@ class FaturasDAO {
                         STATUS_PAGAMENTO = COALESCE(?,status_pagamento),
                         VALOR_TOTAL = COALESCE(?,valor_total)
                         WHERE ID = ?`
-            this.db.run(sql, params, (err) => {
+            this.db.run(sql, params,function (err) {
                 if (err) {
                     reject({
                         "mensagem": err.message

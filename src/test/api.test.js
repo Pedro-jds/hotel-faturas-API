@@ -11,7 +11,6 @@ describe('Teste rota get busca todas faturas', () => {
     })
 })
 
-
 describe('Teste rota get fatura por id', () => {
     test('Testando status 200', () => {
         return request(app)
@@ -41,7 +40,6 @@ describe('Teste update de faturas rota patch', () => {
             })
     })
 })
-
 
 describe('Teste cadastro de faturas rota post', () => {
     test("Teste status 200", async () => {

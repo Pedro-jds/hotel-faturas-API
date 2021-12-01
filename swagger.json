@@ -29,7 +29,7 @@
           "Faturas"
         ],
         "summary": "Cadastra uma fatura",
-        "description": "Atributo status_pagamento aceita somente os dados (pago, pendente ou cancelado)",
+        "description": "Atributo status_pagamento aceita somente os valores (pago, pendente ou cancelado)<br>Atributo metodo_pagamento aceita somente os valores (pix, cartao de credito, cartao de debito, dinheiro e boleto)",
         "parameters": [
           {
             "name": "JSON",
