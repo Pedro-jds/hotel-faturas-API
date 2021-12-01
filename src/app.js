@@ -19,7 +19,7 @@ app.use(cors())
 
 
 
-
+//Rota swagger para visualização das rotas via navagador
 app.use('/api-docs', cors(), swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 
 tarefa(app)

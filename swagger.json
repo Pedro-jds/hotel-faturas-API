@@ -60,7 +60,7 @@
           "Faturas"
         ],
         "summary": "Busca uma fatura pelo identificador",
-        "description": "Retorna uma fatura de acordo com o id enviado na requisição",
+        "description": "Retorna uma fatura de acordo com o identificador enviado na requisição",
         "parameters": [
           {
             "name": "id",
@@ -76,7 +76,7 @@
           "Faturas"
         ],
         "summary": "Deleta uma fatura pelo identificador",
-        "description": "Apaga um registro de acordo com o id enviado na requisição",
+        "description": "Apaga um registro de acordo com o id enviado na requisição</br><b>Necessário enviar o identificador da fatura para apagar a fatura",
         "parameters": [
           {
             "name": "id",
@@ -92,7 +92,7 @@
           "Faturas"
         ],
         "summary": "Atuliza um ou mais dados de uma fatura",
-        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores que são (<b>numeros, inteiros e positivos</b>)<br><b>Faturas podem ser atualizadas de forma integral ou parcial basta não envia o atributo e o valor que não precisa ser atualizado</b>",
+        "description": "<b>Necessário enviar o identificador da fatura para realizar a atualização</b><br>Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores que são (<b>numeros, inteiros e positivos</b>)<br><b>Faturas podem ser atualizadas de forma integral ou parcial basta não enviar o atributo e o valor que não precisa ser atualizado</b>",
         "parameters": [
           {
             "name": "id",
