@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "Hotel California API",
-    "description": ""
+    "description": "APIREST para gerenciar faturas de hotel"
   },
   "host": "faturas-hotel-api.herokuapp.com",
   "basePath": "/",
@@ -29,7 +29,7 @@
           "Faturas"
         ],
         "summary": "Cadastra uma fatura",
-        "description": "Atributo status_pagamento aceita somente os valores (pago, pendente ou cancelado)<br>Atributo metodo_pagamento aceita somente os valores (pix, cartao de credito, cartao de debito, dinheiro e boleto)",
+        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores (<b>numeros, inteiros e positivos</b>)<br><b>Todos atributos precisam ser preenchidos para validar a criação da fatura</b>",
         "parameters": [
           {
             "name": "JSON",
@@ -60,7 +60,7 @@
           "Faturas"
         ],
         "summary": "Busca uma fatura pelo identificador",
-        "description": "",
+        "description": "Retorna uma fatura de acordo com o id enviado na requisição",
         "parameters": [
           {
             "name": "id",
@@ -76,7 +76,7 @@
           "Faturas"
         ],
         "summary": "Deleta uma fatura pelo identificador",
-        "description": "",
+        "description": "Apaga um registro de acordo com o id enviado na requisição",
         "parameters": [
           {
             "name": "id",
@@ -91,8 +91,8 @@
         "tags": [
           "Faturas"
         ],
-        "summary": "Atuliza o dados de uma fatura",
-        "description": "",
+        "summary": "Atuliza um ou mais dados de uma fatura",
+        "description": "Atributo <b>metodo_pagamento</b> aceita somente os valores (<b>pix, cartao de credito, cartao de debito, dinheiro e boleto</b>)<br>Atributo <b>status_pagamento</b> aceita somente os valores (<b>pago, pendente ou cancelado</b>)<br>Atributo <b>valor_total</b> aceita somente os valores (<b>numeros, inteiros e positivos</b>)<br><b>Todos atributos precisam ser preenchidos para validar a criação da fatura</b>",
         "parameters": [
           {
             "name": "id",
@@ -107,7 +107,7 @@
               "type": "object",
               "properties": {
                 "metodo_pagamento": {
-                  "example": "pix"
+                  "example": "dinheiro"
                 },
                 "status_pagamento": {
                   "example": "pago"

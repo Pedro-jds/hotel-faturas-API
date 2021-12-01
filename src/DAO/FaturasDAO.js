@@ -75,7 +75,7 @@ class FaturasDAO {
                         (METODO_PAGAMENTO,STATUS_PAGAMENTO,VALOR_TOTAL)
                         VALUES
                         (?,?,?)`
-            this.db.run(sql, params,function (err) {
+            this.db.run(sql, params, function (err) {
                 if (err) {
                     reject({
                         "mensagem": err.message
@@ -91,31 +91,35 @@ class FaturasDAO {
             })
         })
     }
-    updateById(params) {
-        return new Promise((resolve, reject) => {
-            const sql = `UPDATE FATURAS SET
+    async updateById(params) {
+        const fatura = await this.getById(params[3])
+        if (fatura.Fatura.mensagem === 'Fatura não existe') {
+            throw new Error('Fatura não existe')
+        } else {
+            return new Promise((resolve, reject) => {
+                const sql = `UPDATE FATURAS SET
                         METODO_PAGAMENTO = COALESCE(?,metodo_pagamento),
                         STATUS_PAGAMENTO = COALESCE(?,status_pagamento),
                         VALOR_TOTAL = COALESCE(?,valor_total)
                         WHERE ID = ?`
-            this.db.run(sql, params,function (err) {
-                if (err) {
-                    reject({
-                        "mensagem": err.message
-                    })
-                }
-                else {
-                    resolve({
-                        "mensagem": "Fatura atualizada com sucesso",
-                        "changes": this.changes,
-                        "erro": false
-                    })
-                }
+                this.db.run(sql, params, function (err) {
+                    if (err) {
+                        reject({
+                            "mensagem": err.message
+                        })
+                    }
+                    else {
+                        resolve({
+                            "mensagem": "Fatura atualizada com sucesso",
+                            "identificador": params[3],
+                            "erro": false
+                        })
+                    }
+                })
             })
-        })
+        }
     }
 }
-
 
 
 module.exports = FaturasDAO
