@@ -6,7 +6,8 @@ https://faturas-hotel-api.herokuapp.com/
 ### Bibliotecas utilizadas:
 * [Nodemon](https://nodemon.io/) - recarregamento automático durante desenvolvimento.
 * [Supertest](https://github.com/visionmedia/supertest#readme) - para testar as rotas.
-
+* [Swagger-UI](https://github.com/swagger-api/swagger-ui) - Visualizar, consumir e documentar APIREST
+* [Joi](https://github.com/sideway/joi) - Para fazer validação de dados
 
 ### Banco de dados
 [Sqlite3](https://www.npmjs.com/package/sqlite3).
