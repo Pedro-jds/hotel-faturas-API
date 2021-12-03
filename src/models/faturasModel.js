@@ -10,8 +10,8 @@ class Faturas {
   }
 
   constructor(metodoPagamento, statusPagamento, valorTotal) {
-    this.metodoPagamento = Faturas.verificaMetodo(metodoPagamento).toLowerCase()
-    this.statusPagamento = Faturas.verificaStatus(statusPagamento).toLowerCase()
+    this.metodoPagamento = metodoPagamento.toLowerCase()
+    this.statusPagamento = statusPagamento.toLowerCase()
     this.valorTotal = Faturas.verificaValorTotal(valorTotal)
   }
 
