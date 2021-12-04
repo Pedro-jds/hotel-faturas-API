@@ -41,11 +41,20 @@ HTTP: GET, POST, PUT e DELETE.
 ### **Resumo das rotas**
 Segue abaixo um resumo das rotas da API. Em seguida terão mais informações sobre cada uma delas.
 
+
+* GET: *URL_BASE/faturas/api-docs*
 * GET: *URL_BASE/faturas*
 * GET: *URL_BASE/faturas/{id}*
 * POST: *URL_BASE/faturas*
 * PATCH: *URL_BASE/faturas/{id}*
 * DELETE: *URL_BASE/faturas/{id}*
+
+
+### **Retornando as faturas**
+
+GET: *URL_BASE/faturas/api-docs*
+
+Permite visualizar e interagir com todas as rotas via navegador 
 
 
 ### **Retornando as faturas**
