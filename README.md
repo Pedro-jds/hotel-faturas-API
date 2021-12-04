@@ -50,7 +50,7 @@ Segue abaixo um resumo das rotas da API. Em seguida terão mais informações so
 * DELETE: *URL_BASE/faturas/{id}*
 
 
-### **Retornando as faturas**
+### **Visualizando e interagindo com a rota faturas**
 
 GET: *URL_BASE/faturas/api-docs*
 
